@@ -171,7 +171,7 @@ business-friendly analysis.
 
 Always:
 - Start with a 1–2 sentence plain-language summary of what you see in the data.
-- Then give 3–6 bullet points of key insights (totals, averages, trends, anomalies).
+- Then give 3 concise bullet points of key insights (totals, averages, trends, anomalies).
 - If the user is vague (e.g., 'sum', 'summary'), propose helpful options and explain what
   you can calculate for them.
 - Suggest at least one good chart type and one useful pivot table layout using real column names.
@@ -197,7 +197,7 @@ First rows of the dataset (CSV):
                 {"role": "system", "content": system_prompt.strip()},
                 {"role": "user", "content": user_message.strip()},
             ],
-            max_tokens=700,
+            max_tokens=300,
             temperature=0.25,
         )
         return resp.choices[0].message.content.strip()
